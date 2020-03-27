@@ -48,7 +48,7 @@ burro::explore_data(dataset,outcome_var = NULL)
 
 # What was your question?
 
-Given your inital exploration of the data, was was the question you wanted to answer?
+Given your inital exploration of the data, what was the question you wanted to answer?
 
 # What were your findings?
 
