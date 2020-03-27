@@ -1,0 +1,41 @@
+---
+title: "Tidy Tuesday Template"
+author: "You!"
+date: "3/26/2020"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Show the available datasets
+
+```{r}
+remotes::install_github("thebioengineer/tidytuesdayR")
+library(tidytuesdayR)
+#This will open up in the help window
+tidytuesdayR::tt_available()
+```
+
+# What was your dataset?
+
+Load your dataset in with the function below. The input is the date the dataset was issued. You should be able to get this from the `tt_available()` function.
+
+```{r}
+dataset <- tidytuesdayR::tt_load("2020-01-07")
+```
+
+
+
+# What was your question?
+
+# What were your findings?
+
+Put your findings and your visualization code here
+
+```{r}
+
+```
+
+# What did you learn?
