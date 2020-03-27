@@ -11,8 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Show the available datasets
 
+You'll need to install both `remotes` and `tidytuesdayR` to do this:
+
 ```{r}
+install.packages("remotes")
 remotes::install_github("thebioengineer/tidytuesdayR")
+```
+
+```{r}
+
 library(tidytuesdayR)
 #This will open up in the help window
 tidytuesdayR::tt_available()
