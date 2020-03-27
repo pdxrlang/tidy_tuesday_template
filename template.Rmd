@@ -9,17 +9,20 @@ output: html_notebook
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Show the available datasets
+# Install the needed packages
 
 You'll need to install both `remotes` and `tidytuesdayR` to do this:
 
 ```{r}
 install.packages("remotes")
 remotes::install_github("thebioengineer/tidytuesdayR")
+#optional
+#remotes::install_github("laderast/burro")
 ```
 
-```{r}
+# Look at the available datasets
 
+```{r}
 library(tidytuesdayR)
 #This will open up in the help window
 tidytuesdayR::tt_available()
@@ -30,19 +33,31 @@ tidytuesdayR::tt_available()
 Load your dataset in with the function below. The input is the date the dataset was issued. You should be able to get this from the `tt_available()` function.
 
 ```{r}
-dataset <- tidytuesdayR::tt_load("2020-01-07")
+#incoming data comes in as a list
+datasets <- tidytuesdayR::tt_load("2020-01-14")
+#show the names of the individual datasets
+names(datasets)
+dataset <- datasets$passwords
 ```
 
+A quick way to explore the data is with `burro`:
 
+```{r}
+burro::explore_data(dataset,outcome_var = NULL)
+```
 
 # What was your question?
 
+Given your inital exploration of the data, was was the question you wanted to answer?
+
 # What were your findings?
 
-Put your findings and your visualization code here
+Put your findings and your visualization code here.
 
 ```{r}
 
 ```
 
 # What did you learn?
+
+Were there any lessons you learned? Any cool packages you want to talk about?
